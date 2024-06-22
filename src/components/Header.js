@@ -23,13 +23,8 @@ export const Header = () => {
             <ul className="flex p-4 m-4 gap-8 text-lg ">
               <li>Online Status:{isOnline?'🟢':'🔴'}</li>
               <li><Link to={'/'}>Home</Link></li>
-              <li><Link to={'/about'}>About Us</Link></li>
               <li><Link to={'/contact'}>Contact Us</Link></li>
               <li className="font-bold text-xl cursor-pointer"><Link to={'/cart'}>Cart{cartItems.length?`(${cartItems.length})`:''}</Link></li>
-              <li><Link to={'/grocery'}>Grocery</Link></li>
-              <button className="login" onClick={()=>{
-                btn==='Login'? setBtn('Logout'):setBtn('Login')
-              }}>{btn}</button>
               <li className="px-4 font-bold">{loggedInUser}</li>
             </ul>
           </div>
