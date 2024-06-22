@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import appStore from "../../utils/appStore";
 import { Header } from "../Header";
 import { BrowserRouter } from "react-router-dom";
-import '@testing-library/jest-dom'
+import "@testing-library/jest-dom";
 import Cart from "../Cart";
 
 global.fetch = jest.fn(() =>
@@ -21,7 +21,7 @@ it("should load Restaurant menu component", async () => {
         <Provider store={appStore}>
           <Header />
           <RestaurantMenu />
-          <Cart/>
+          <Cart />
         </Provider>
       </BrowserRouter>
     )
@@ -36,11 +36,10 @@ it("should load Restaurant menu component", async () => {
   const addBtns = screen.getAllByRole("button", { name: "Add+" });
   fireEvent.click(addBtns[0]);
 
-  expect(screen.getByText('Cart(1)')).toBeInTheDocument();
+  expect(screen.getByText("Cart(1)")).toBeInTheDocument();
 
   expect(screen.getAllByTestId("foodItems").length).toBe(21);
-  fireEvent.click(screen.getByRole('button',{name:'Clear cart'}));
+  fireEvent.click(screen.getByRole("button", { name: "Clear cart" }));
   expect(screen.getAllByTestId("foodItems").length).toBe(20);
-  expect(screen.getByText('Cart is empty.')).toBeInTheDocument();
-
+  expect(screen.getByText("Cart is empty.")).toBeInTheDocument();
 });

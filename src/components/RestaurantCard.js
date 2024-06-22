@@ -4,7 +4,10 @@ export const RestaurantCard = ({ data }) => {
   // console.log(data);
   const { cloudinaryImageId, name, cuisines, avgRating, areaName } = data || {};
   return (
-    <div data-testid='resCard' className="res-card m-4 p-4 w-[17vw] rounded-lg bg-gray-100 hover:bg-gray-300">
+    <div
+      data-testid="resCard"
+      className="res-card m-4 p-4 w-[17vw] rounded-lg bg-gray-100 hover:bg-gray-300"
+    >
       <img
         className="res-logo rounded-lg "
         alt="res-logo"
@@ -23,7 +26,9 @@ export const withReviewLabel = (RestaurantCard) => {
     // console.log(props);
     return (
       <>
-        <label className="m-8 p-1 absolute bg-black text-white opacity-100 rounded-lg">1k+ Review</label>
+        <label className="m-8 p-1 absolute bg-black text-white opacity-100 rounded-lg">
+          1k+ Review
+        </label>
         <RestaurantCard {...props} />
       </>
     );

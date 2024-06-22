@@ -6,17 +6,18 @@ import { addItem } from "../utils/cartSlice";
 const ItemList = ({ items }) => {
   const dispatch = useDispatch();
   console.log("items", items);
-  const handleAddItem = (item)=>{
+  const handleAddItem = (item) => {
     // Dispatch an action
-    dispatch(addItem(item))
-  }
+    dispatch(addItem(item));
+  };
   return (
     <div>
       {items?.map((item) => {
-        const { id, name, defaultPrice, imageId, price, description } = item?.card?.info;
+        const { id, name, defaultPrice, imageId, price, description } =
+          item?.card?.info;
         return (
           <div
-            data-testid='foodItems'
+            data-testid="foodItems"
             key={id}
             className="p-2 m-2 border-b-[1px] shadow-sm flex justify-between border-gray-200 text-left"
           >
@@ -28,9 +29,12 @@ const ItemList = ({ items }) => {
             </div>
             <div className="w-3/12 p-4">
               <div className="absolute">
-                <button onClick={()=>{
-                  handleAddItem(item)
-                }} className=" py-1 px-8 bg-white shadow-lg my-[-1rem] mx-6 rounded font-bold text-green-500">
+                <button
+                  onClick={() => {
+                    handleAddItem(item);
+                  }}
+                  className=" py-1 px-8 bg-white shadow-lg my-[-1rem] mx-6 rounded font-bold text-green-500"
+                >
                   Add+
                 </button>
               </div>

@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Grocery = () => {
-  return (
-    <div>
-      Grocery part
-    </div>
-  )
-}
+  return <div>Grocery part</div>;
+};
 
-export default Grocery
+export default Grocery;
