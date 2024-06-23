@@ -7,10 +7,10 @@ Config for this app
   - Jest for testing.
   - Redux Toolkit & Context API for state management.
 
--In this app, I have created a custom hook "useOnlineStatus" you can find it in the Utils folder.
--A higher-order component(HOC) is also used in the app for the review label for restaurant cards with higher than 1k reviews.
--Shimmer UI is used for a better user experience.
--A glimpse of the app is provided below in the screenshots.
+-In this app, I have created a custom hook "useOnlineStatus". You can find it in the Utils folder.
+- A higher-order component (HOC) is also used in the app for the "top-rated" label for restaurant cards with more than 1,000 reviews.
+- Shimmer UI enhances the user experience.
+- A glimpse of the app is provided below in the screenshots.
 
 Home Page- ![image](https://github.com/jais-shivam/food-app/assets/47588402/3ca45f2b-1fb7-48ce-b306-5c8fed9402ee)
 Accordian for food menu- ![image](https://github.com/jais-shivam/food-app/assets/47588402/c1378943-7248-4fac-9878-7f9e1a277bda)
